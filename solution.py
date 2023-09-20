@@ -16,7 +16,8 @@ class Solution:
     def __init__(self, n):
         self.a = []
         for i in range(n):
-            self.a.append(Node(random.randint(0,n), i==0))
+            #self.a.append(Node(random.randint(0,n), i==0))
+            self.a.append(Node(random.randint(0,n-1), i==0))
     def toString(self):
         for i in self.a:
             print(i.val, i.isRoot)
@@ -27,6 +28,7 @@ class Solution:
                 return False
         return True
     def op(self):
+        self.toString()
         while(True):
             #q = set()
             #for i in self.a:
